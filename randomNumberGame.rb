@@ -21,7 +21,7 @@ guess = gets.chomp
 while guess !="-8"
 	#guess = 2
 	numGuess = guess.to_i     #new variable for guess to integer
-	random = rand(10)
+	random = rand(9)+1
 	choice = nil
 	if numGuess>=1 && numGuess<=10   #To verify user can follow instructions
 		choice = numGuess
