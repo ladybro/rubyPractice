@@ -1,4 +1,4 @@
-words = {"one"=>1, "two"=>2, "three"=>3, "four"=>4, "five"=>5, "six"=>6, "seve"=>7, "eight"=>8, "nine"=>9, "ten"=>10}
+words = {"one"=>1, "two"=>2, "three"=>3, "four"=>4, "five"=>5, "six"=>6, "seven"=>7, "eight"=>8, "nine"=>9, "ten"=>10}
 puts "Guess a number between 1 and 10"
 #guess = gets.chomp
 guess = 2
