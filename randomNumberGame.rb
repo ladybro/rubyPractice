@@ -1,7 +1,9 @@
 words = {"one"=>1, "two"=>2, "three"=>3, "four"=>4, "five"=>5, "six"=>6, "seven"=>7, "eight"=>8, "nine"=>9, "ten"=>10}
 puts "Guess a number between 1 and 10"
-#guess = gets.chomp
-guess = 2
+puts "Entering -8 will end the game"
+guess = gets.chomp
+while guess !="-8"
+#guess = 2
 numGuess = guess.to_i     #new variable for guess to integer
 random = rand(10)
 choice = nil
@@ -16,4 +18,7 @@ else
 end
 if choice == random
 	puts "Congratulations! You've won!"
+end
+puts "Guess a number between 1 and 10"
+guess = gets.chomp
 end
