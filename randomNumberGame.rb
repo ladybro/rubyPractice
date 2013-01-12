@@ -17,26 +17,35 @@
 words = {"one"=>1, "two"=>2, "three"=>3, "four"=>4, "five"=>5, "six"=>6, "seven"=>7, "eight"=>8, "nine"=>9, "ten"=>10}
 puts "Guess a number between 1 and 10"
 puts "Entering -8 will end the game"
+
+gamesPlayed = 0
+totalWins=0
+chances = 5;
 guess = gets.chomp
 while guess !="-8"
 	#guess = 2
+	gamesPlayed+=1
 	numGuess = guess.to_i     #new variable for guess to integer
-	random = rand(9)+1
+	random = rand(99)+1
 	choice = nil
-	if numGuess>=1 && numGuess<=10   #To verify user can follow instructions
+
+	if numGuess>=1 && numGuess<=100  #To verify user can follow instructions
 		choice = numGuess
-		puts "You guessed " + numGuess.to_s + " The random number was " + random.to_s
+		#puts "You guessed " + numGuess.to_s + " The random number was " + random.to_s
 	elsif words.include?(guess)
 		choice = words[guess]
-		puts "You guessed " + words[guess].to_s + " The random number was " + random.to_s
+		#puts "You guessed " + words[guess] + " The random number was " + random.to_s
 	else
 		puts "You Lose!"
 	end
 	if choice == random
+		totalWins+= 1
 		puts "Congratulations! You've won!"
 	else 
 		puts "You guessed incorrectly. Please try again."
 	end
-	puts "Guess a number between 1 and 10"
+	puts "You have " + chances.to_s + " chances to guess a number between 1 and 100"
+	
+	puts "You have won " + totalWins.to_s + " out of " + gamesPlayed.to_s + " games"
 	guess = gets.chomp
 end
